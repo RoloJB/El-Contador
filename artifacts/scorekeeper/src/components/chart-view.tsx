@@ -13,8 +13,8 @@ export function ChartView({ state }: { state: GameState }) {
       chartRef.current.destroy();
     }
 
-    const labels = state.rounds.map(r => `Round ${r.roundNumber}`);
-    labels.unshift('Start'); // Initial 0 point
+    const labels = state.rounds.map(r => `Ronda ${r.roundNumber}`);
+    labels.unshift('Inicio');
 
     const datasets = state.players.map(player => {
       let cumulative = 0;

@@ -82,7 +82,7 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
             <TabsTrigger value="play" className="text-sm sm:text-base">Jugar</TabsTrigger>
             <TabsTrigger value="history" className="text-sm sm:text-base">Historial</TabsTrigger>
             <TabsTrigger value="chart" className="text-sm sm:text-base">Gráfica</TabsTrigger>
-            <TabsTrigger value="stats" className="text-sm sm:text-base">Stats</TabsTrigger>
+            <TabsTrigger value="stats" className="text-sm sm:text-base">Estadísticas</TabsTrigger>
           </TabsList>
 
           <TabsContent value="play" className="animate-in fade-in slide-in-from-bottom-4 duration-500">
