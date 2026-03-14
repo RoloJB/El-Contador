@@ -70,7 +70,7 @@ function App() {
     const metaTags = [
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { name: 'apple-mobile-web-app-title', content: 'ScoreKeeper' },
+      { name: 'apple-mobile-web-app-title', content: 'El Contador' },
       { name: 'theme-color', content: '#09090b' },
     ];
 
@@ -145,7 +145,7 @@ function App() {
             )}
             {navigator.share && (
               <button 
-                onClick={() => navigator.share({ title: 'ScoreKeeper', url: window.location.href })}
+                onClick={() => navigator.share({ title: 'El Contador', url: window.location.href })}
                 className="bg-secondary text-secondary-foreground border border-border px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
               >
                 Compartir

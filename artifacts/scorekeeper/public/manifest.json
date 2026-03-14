@@ -1,7 +1,7 @@
 {
-  "name": "ScoreKeeper - Board Game Tracker",
-  "short_name": "ScoreKeeper",
-  "description": "Professional board game score tracker with real-time analytics and statistics.",
+  "name": "El Contador - Marcador de Juegos",
+  "short_name": "El Contador",
+  "description": "Marcador de juegos de mesa con rankings animados, gráficas y estadísticas.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#09090b",

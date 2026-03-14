@@ -39,7 +39,7 @@ export function Setup({ state, addPlayer, removePlayer, beginPlaying, resumeGame
             <Gamepad2 className="w-10 h-10" />
           </div>
           <h1 className="text-5xl font-display font-black bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-            ScoreKeeper
+            El Contador
           </h1>
           <p className="text-muted-foreground text-lg">Lleva el puntaje de tu partida.</p>
         </div>

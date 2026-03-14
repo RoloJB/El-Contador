@@ -59,7 +59,7 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
           </Button>
           
           <div className="flex items-center gap-2">
-            <h2 className="font-display font-bold text-xl hidden sm:block">ScoreKeeper</h2>
+            <h2 className="font-display font-bold text-xl hidden sm:block">El Contador</h2>
             <div className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase ml-2 border border-primary/30">
               Meta: {state.targetScore}
             </div>
