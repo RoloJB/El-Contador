@@ -4,7 +4,7 @@ export function HistoryTable({ state }: { state: GameState }) {
   if (state.rounds.length === 0) {
     return (
       <div className="text-center p-10 bg-card rounded-2xl border border-border/50 text-muted-foreground">
-        No rounds played yet.
+        Todavía no se han jugado rondas.
       </div>
     );
   }
@@ -15,10 +15,10 @@ export function HistoryTable({ state }: { state: GameState }) {
         <table className="w-full text-sm text-left">
           <thead className="text-xs uppercase bg-muted/50 border-b border-border">
             <tr>
-              <th className="px-4 py-4 font-bold sticky left-0 bg-muted/50 backdrop-blur-md z-10">Player</th>
+              <th className="px-4 py-4 font-bold sticky left-0 bg-muted/50 backdrop-blur-md z-10">Jugador</th>
               {state.rounds.map(r => (
                 <th key={r.id} className="px-4 py-4 font-bold text-center whitespace-nowrap">
-                  R{r.roundNumber}
+                  Ronda {r.roundNumber}
                 </th>
               ))}
               <th className="px-4 py-4 font-bold text-right">Total</th>

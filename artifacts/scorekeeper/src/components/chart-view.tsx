@@ -88,7 +88,7 @@ export function ChartView({ state }: { state: GameState }) {
     <div className="bg-card p-4 sm:p-6 rounded-2xl border border-border shadow-lg h-[400px] sm:h-[500px] relative w-full">
       {state.rounds.length === 0 ? (
         <div className="absolute inset-0 flex items-center justify-center text-muted-foreground font-medium">
-          Play a round to see the chart
+          Juega una ronda para ver la gráfica
         </div>
       ) : null}
       <canvas ref={canvasRef} />

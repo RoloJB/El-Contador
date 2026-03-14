@@ -8,7 +8,7 @@ export function RankingBoard({ players }: { players: Player[] }) {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-xl font-display font-bold text-foreground">Current Rankings</h3>
+      <h3 className="text-xl font-display font-bold text-foreground">Tabla de Posiciones</h3>
       <div className="space-y-3">
         <AnimatePresence>
           {sortedPlayers.map((player, index) => {

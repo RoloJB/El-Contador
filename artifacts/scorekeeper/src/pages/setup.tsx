@@ -41,31 +41,31 @@ export function Setup({ state, addPlayer, removePlayer, beginPlaying, resumeGame
           <h1 className="text-5xl font-display font-black bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
             ScoreKeeper
           </h1>
-          <p className="text-muted-foreground text-lg">Track your epic game nights.</p>
+          <p className="text-muted-foreground text-lg">Lleva el puntaje de tu partida.</p>
         </div>
 
         {isResumeAvailable && (
           <div className="bg-card border border-border p-6 rounded-2xl shadow-xl flex flex-col items-center text-center gap-4">
-            <h3 className="text-xl font-bold">Game in Progress Found!</h3>
-            <p className="text-muted-foreground">You have a game with {state.players.length} players at Round {state.rounds.length}.</p>
+            <h3 className="text-xl font-bold">¡Partida en curso encontrada!</h3>
+            <p className="text-muted-foreground">Tienes una partida con {state.players.length} jugadores en la Ronda {state.rounds.length}.</p>
             <Button size="lg" className="w-full shadow-[0_0_20px_rgba(0,255,153,0.3)] bg-emerald-600 hover:bg-emerald-500 text-white" onClick={resumeGame}>
-              Continue Game
+              Continuar partida
             </Button>
-            <span className="text-sm text-muted-foreground uppercase font-bold tracking-widest">or start new</span>
+            <span className="text-sm text-muted-foreground uppercase font-bold tracking-widest">o empezar nueva</span>
           </div>
         )}
 
         <div className="bg-card border border-border/50 shadow-2xl rounded-3xl p-6 sm:p-8 space-y-6 relative overflow-hidden">
           <div className="flex items-center gap-3 border-b border-border/50 pb-4">
             <Settings2 className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-display font-bold">Player Setup</h2>
+            <h2 className="text-2xl font-display font-bold">Configurar jugadores</h2>
           </div>
 
           <form onSubmit={handleAdd} className="flex gap-3 relative z-10">
             <Input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Enter player name..."
+              placeholder="Nombre del jugador..."
               className="flex-1"
               maxLength={15}
               disabled={state.players.length >= 7}
@@ -89,7 +89,7 @@ export function Setup({ state, addPlayer, removePlayer, beginPlaying, resumeGame
                   exit={{ opacity: 0 }}
                   className="absolute inset-0 flex items-center justify-center text-muted-foreground text-center"
                 >
-                  Add 3 to 7 players to begin.
+                  Agrega de 3 a 7 jugadores para comenzar.
                 </motion.div>
               )}
               {state.players.map((player) => (
@@ -122,7 +122,7 @@ export function Setup({ state, addPlayer, removePlayer, beginPlaying, resumeGame
             onClick={beginPlaying}
           >
             <span className="flex items-center gap-2 group-hover:scale-105 transition-transform">
-              Start Game <Play className="w-6 h-6 fill-current" />
+              Iniciar partida <Play className="w-6 h-6 fill-current" />
             </span>
           </Button>
         </div>

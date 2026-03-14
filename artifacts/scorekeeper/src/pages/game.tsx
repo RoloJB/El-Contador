@@ -55,13 +55,13 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
       <header className="bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
           <Button variant="ghost" size="sm" onClick={startNewGame} className="text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Exit
+            <ArrowLeft className="w-4 h-4 mr-2" /> Salir
           </Button>
           
           <div className="flex items-center gap-2">
             <h2 className="font-display font-bold text-xl hidden sm:block">ScoreKeeper</h2>
             <div className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase ml-2 border border-primary/30">
-              Target: {state.targetScore}
+              Meta: {state.targetScore}
             </div>
           </div>
           
@@ -79,9 +79,9 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
       <main className="max-w-4xl mx-auto px-4 py-8">
         <Tabs defaultValue="play" className="space-y-6">
           <TabsList className="grid w-full grid-cols-4 h-14 bg-card border border-border shadow-sm">
-            <TabsTrigger value="play" className="text-sm sm:text-base">Play</TabsTrigger>
-            <TabsTrigger value="history" className="text-sm sm:text-base">History</TabsTrigger>
-            <TabsTrigger value="chart" className="text-sm sm:text-base">Chart</TabsTrigger>
+            <TabsTrigger value="play" className="text-sm sm:text-base">Jugar</TabsTrigger>
+            <TabsTrigger value="history" className="text-sm sm:text-base">Historial</TabsTrigger>
+            <TabsTrigger value="chart" className="text-sm sm:text-base">Gráfica</TabsTrigger>
             <TabsTrigger value="stats" className="text-sm sm:text-base">Stats</TabsTrigger>
           </TabsList>
 
@@ -93,8 +93,8 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
                 <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-xl">
                   <div className="flex justify-between items-end mb-6">
                     <div>
-                      <h3 className="text-muted-foreground font-bold uppercase tracking-widest text-sm mb-1">Enter Scores</h3>
-                      <h2 className="text-4xl font-display font-black text-foreground">Round {state.rounds.length + 1}</h2>
+                      <h3 className="text-muted-foreground font-bold uppercase tracking-widest text-sm mb-1">Ingresar Puntajes</h3>
+                      <h2 className="text-4xl font-display font-black text-foreground">Ronda {state.rounds.length + 1}</h2>
                     </div>
                   </div>
 
@@ -131,7 +131,7 @@ export function Game({ state, saveRound, startNewGame }: GameProps) {
                     ))}
 
                     <Button type="submit" size="lg" className="w-full h-16 mt-6 text-xl rounded-2xl">
-                      Save Round
+                      Guardar Ronda
                     </Button>
                   </form>
                 </div>

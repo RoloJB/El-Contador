@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -25,40 +25,39 @@ function MainRouter() {
   } = useGameState();
 
   if (!hasRestored) {
-    return <div className="min-h-screen bg-background flex items-center justify-center text-primary font-display text-2xl animate-pulse">Loading...</div>;
+    return <div className="min-h-screen bg-background flex items-center justify-center text-primary font-display text-2xl animate-pulse">Cargando...</div>;
   }
 
-  const showSetup = state.status === 'setup' || state.status === 'idle';
-  const showGame = state.status === 'playing' || state.status === 'victory';
+  // Victory replaces everything — it IS the full final screen
+  if (state.status === 'victory') {
+    return (
+      <Victory
+        state={state}
+        playAgainSame={playAgainSamePlayers}
+        startNewGame={startNewGame}
+      />
+    );
+  }
 
+  if (state.status === 'playing') {
+    return (
+      <Game
+        state={state}
+        saveRound={saveRound}
+        startNewGame={startNewGame}
+      />
+    );
+  }
+
+  // 'setup' | 'idle'
   return (
-    <>
-      {showSetup && (
-        <Setup 
-          state={state} 
-          addPlayer={addPlayer} 
-          removePlayer={removePlayer} 
-          beginPlaying={beginPlaying} 
-          resumeGame={resumeGame}
-        />
-      )}
-
-      {showGame && (
-        <Game 
-          state={state} 
-          saveRound={saveRound} 
-          startNewGame={startNewGame} 
-        />
-      )}
-
-      {state.status === 'victory' && (
-        <Victory 
-          state={state} 
-          playAgainSame={playAgainSamePlayers} 
-          startNewGame={startNewGame} 
-        />
-      )}
-    </>
+    <Setup
+      state={state}
+      addPlayer={addPlayer}
+      removePlayer={removePlayer}
+      beginPlaying={beginPlaying}
+      resumeGame={resumeGame}
+    />
   );
 }
 
@@ -141,7 +140,7 @@ function App() {
                 onClick={handleInstall}
                 className="bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
               >
-                Install App
+                Instalar app
               </button>
             )}
             {navigator.share && (
@@ -149,7 +148,7 @@ function App() {
                 onClick={() => navigator.share({ title: 'ScoreKeeper', url: window.location.href })}
                 className="bg-secondary text-secondary-foreground border border-border px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
               >
-                Share
+                Compartir
               </button>
             )}
           </div>

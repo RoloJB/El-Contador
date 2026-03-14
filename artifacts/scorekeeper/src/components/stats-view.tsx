@@ -32,7 +32,7 @@ export function StatsView({ state }: { state: GameState }) {
           <Trophy className="w-8 h-8" />
         </div>
         <div>
-          <p className="text-sm text-muted-foreground font-semibold">Current Leader</p>
+          <p className="text-sm text-muted-foreground font-semibold">Líder actual</p>
           <p className="text-2xl font-bold" style={{ color: leader?.color }}>
             {leader?.name || '-'} ({leader?.totalScore || 0})
           </p>
@@ -44,12 +44,12 @@ export function StatsView({ state }: { state: GameState }) {
           <TrendingUp className="w-8 h-8" />
         </div>
         <div>
-          <p className="text-sm text-muted-foreground font-semibold">Best Single Round</p>
+          <p className="text-sm text-muted-foreground font-semibold">Mejor ronda individual</p>
           <p className="text-2xl font-bold text-foreground">
             {bestRoundScore > 0 ? `${bestRoundScore} pts` : '-'}
           </p>
           {bestRoundScore > 0 && (
-            <p className="text-xs text-muted-foreground">by {bestRoundPlayer} in Round {bestRoundNum}</p>
+            <p className="text-xs text-muted-foreground">por {bestRoundPlayer} en Ronda {bestRoundNum}</p>
           )}
         </div>
       </div>
@@ -59,7 +59,7 @@ export function StatsView({ state }: { state: GameState }) {
           <Hash className="w-8 h-8" />
         </div>
         <div>
-          <p className="text-sm text-muted-foreground font-semibold">Total Rounds</p>
+          <p className="text-sm text-muted-foreground font-semibold">Rondas jugadas</p>
           <p className="text-3xl font-display font-black text-foreground">{state.rounds.length}</p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export function StatsView({ state }: { state: GameState }) {
           <Activity className="w-8 h-8" />
         </div>
         <div>
-          <p className="text-sm text-muted-foreground font-semibold">Avg Points / Round / Player</p>
+          <p className="text-sm text-muted-foreground font-semibold">Promedio pts / Ronda / Jugador</p>
           <p className="text-3xl font-display font-black text-foreground">{avgPointsPerRound}</p>
         </div>
       </div>
