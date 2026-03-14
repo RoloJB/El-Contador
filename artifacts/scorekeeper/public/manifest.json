@@ -1,0 +1,16 @@
+{
+  "name": "ScoreKeeper - Board Game Tracker",
+  "short_name": "ScoreKeeper",
+  "description": "Professional board game score tracker with real-time analytics and statistics.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

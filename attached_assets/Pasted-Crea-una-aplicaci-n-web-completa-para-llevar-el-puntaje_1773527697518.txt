@@ -1,0 +1,431 @@
+Crea una aplicación web completa para llevar el puntaje de un juego de mesa entre varios jugadores. La aplicación debe sentirse como una app profesional de contador de puntos, optimizada para celulares y diseñada para usarse fácilmente durante una partida real.
+
+Debe poder instalarse como aplicación en el teléfono, funcionar sin internet y poder compartirse mediante un enlace para que otros usuarios también puedan abrirla e instalarla.
+
+Además debe tener un modo opcional para que varios jugadores puedan ver el mismo marcador en tiempo real desde sus propios celulares.
+
+La experiencia debe sentirse como una app moderna de juego.
+
+---
+
+# Tecnologías
+
+Usar:
+
+HTML  
+CSS  
+JavaScript moderno  
+
+Utilizar:
+
+React + Vite
+
+Usar también:
+
+Tailwind CSS
+
+para crear un diseño moderno y limpio.
+
+Organizar el proyecto con una estructura clara de componentes.
+
+---
+
+# Progressive Web App (PWA)
+
+La aplicación debe implementarse como Progressive Web App instalable.
+
+Crear:
+
+manifest.json  
+service-worker.js
+
+Características:
+
+- funcionar completamente offline
+- poder instalarse en Android y iPhone
+- abrir en pantalla completa
+- cachear archivos para uso offline
+- iconos de app
+- splash screen
+
+Agregar botón visible:
+
+"Instalar aplicación"
+
+Implementar evento:
+
+beforeinstallprompt
+
+---
+
+# Compatibilidad con iPhone
+
+Agregar meta tags para iOS:
+
+apple-mobile-web-app-capable  
+apple-mobile-web-app-status-bar-style  
+apple-mobile-web-app-title  
+
+Agregar iconos compatibles con iOS.
+
+---
+
+# Pantalla inicial
+
+Pantalla para ingresar jugadores.
+
+Reglas:
+
+mínimo 3 jugadores  
+máximo 7 jugadores
+
+Validaciones:
+
+- no permitir nombres vacíos
+- no permitir nombres duplicados
+
+Botón:
+
+"Iniciar partida"
+
+---
+
+# Interfaz optimizada para juegos de mesa
+
+La interfaz debe ser:
+
+- clara
+- rápida
+- botones grandes
+- optimizada para pantallas táctiles
+- optimizada para iPhone y Android
+
+Mostrar siempre:
+
+- número de ronda
+- ranking
+- puntajes totales
+
+---
+
+# Colores por jugador
+
+Asignar automáticamente un color único a cada jugador.
+
+Usarlo en:
+
+- ranking
+- gráfica
+- indicadores visuales
+
+---
+
+# Sistema de rondas
+
+Rondas infinitas.
+
+Comenzar en:
+
+Ronda 1
+
+En cada ronda ingresar puntajes por jugador.
+
+Botón:
+
+Guardar ronda
+
+Validaciones:
+
+- solo números
+- no permitir campos vacíos
+
+---
+
+# Modo rápido
+
+Permitir ingresar puntos rápidamente.
+
+Al presionar Enter:
+
+pasar automáticamente al siguiente jugador.
+
+---
+
+# Cálculo de puntajes
+
+Ronda 1:
+
+puntaje inicial.
+
+Ronda 2 en adelante:
+
+sumar al acumulado.
+
+---
+
+# Ranking animado tipo videojuego
+
+Mostrar tabla:
+
+Posición  
+Jugador  
+Puntaje total
+
+Orden automático:
+
+mayor → menor.
+
+Agregar:
+
+- animación cuando cambian posiciones
+- destacar líder
+- corona animada al primer lugar
+
+---
+
+# Tabla histórica de rondas
+
+Tabla completa:
+
+Jugador  
+Ronda 1  
+Ronda 2  
+Ronda 3  
+...  
+Total
+
+Cada ronda agrega columna automáticamente.
+
+---
+
+# Gráfica de evolución
+
+Usar:
+
+Chart.js
+
+Mostrar:
+
+- línea por jugador
+- colores personalizados
+- eje X = rondas
+- eje Y = puntaje acumulado
+
+---
+
+# Estadísticas
+
+Mostrar:
+
+- jugador con mayor puntaje
+- mayor incremento en una ronda
+- número total de rondas
+- promedio de puntos por ronda
+
+---
+
+# Guardado automático
+
+Guardar partida en:
+
+localStorage
+
+Al abrir la app preguntar:
+
+"¿Deseas continuar la partida?"
+
+Opciones:
+
+Continuar  
+Nueva partida
+
+---
+
+# Condición de victoria
+
+Si algún jugador alcanza:
+
+200 puntos o más.
+
+El ganador es el jugador con mayor puntaje total.
+
+---
+
+# Pantalla de victoria
+
+Mostrar modal grande:
+
+🏆 Ganador: [nombre]
+
+Agregar:
+
+confetti animado  
+animación visual  
+destacar ganador
+
+---
+
+# Vibración del celular
+
+Usar:
+
+navigator.vibrate
+
+cuando aparece el ganador.
+
+---
+
+# Sonidos del juego
+
+Agregar sonidos:
+
+- guardar ronda
+- cambio ranking
+- victoria
+
+Permitir activarlos o desactivarlos.
+
+---
+
+# Pantalla final
+
+Mostrar:
+
+tabla final  
+tabla de rondas  
+gráfica final  
+estadísticas
+
+---
+
+# Reiniciar juego
+
+Preguntar:
+
+¿Deseas jugar otra partida?
+
+Opciones:
+
+Mismos jugadores  
+Cambiar jugadores
+
+---
+
+# Modo oscuro automático
+
+Usar:
+
+prefers-color-scheme
+
+para modo oscuro y claro.
+
+---
+
+# Botón compartir
+
+Agregar botón:
+
+"Compartir app"
+
+Usar:
+
+Web Share API
+
+para compartir enlace.
+
+---
+
+# Modo multijugador en tiempo real
+
+Agregar modo opcional con salas de juego.
+
+Funciones:
+
+- crear sala
+- generar código
+- otros jugadores ingresan código
+- ver marcador en tiempo real
+
+Usar:
+
+Firebase Realtime Database  
+o Supabase Realtime.
+
+Solo el anfitrión puede ingresar puntos.
+
+---
+
+# Iconos de app
+
+Crear:
+
+192x192  
+512x512
+
+---
+
+# Optimización offline
+
+Service worker con estrategia:
+
+Cache First
+
+---
+
+# Publicación
+
+Preparar para desplegar fácilmente en:
+
+Replit Deployments.
+
+Debe generar enlace tipo:
+
+https://mi-app.replit.app
+
+Desde celular debe permitir:
+
+- abrir app
+- instalar app
+- usar offline
+
+---
+
+# Organización del proyecto
+
+Estructura clara:
+
+src/  
+components/  
+styles/  
+services/  
+
+Archivos:
+
+index.html  
+main.jsx  
+App.jsx  
+
+---
+
+# Diseño visual
+
+Usar:
+
+Tailwind CSS
+
+Crear diseño moderno tipo app móvil.
+
+Agregar:
+
+- tarjetas
+- animaciones suaves
+- transiciones
+- sombras suaves
+
+La app debe verse profesional.
+
+---
+
+# Objetivo final
+
+La aplicación debe sentirse como una app profesional de contador de puntos para juegos de mesa, con animaciones, gráficos, estadísticas, modo multijugador opcional, instalación como app móvil y posibilidad de compartir mediante enlace.

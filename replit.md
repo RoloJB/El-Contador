@@ -4,6 +4,28 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Artifacts
+
+### `artifacts/scorekeeper` — Board Game Score Tracker PWA
+
+A professional board game score tracker built as a Progressive Web App (PWA).
+
+**Features:**
+- Player setup (3-7 players) with unique neon colors per player
+- Round-by-round scoring with Enter key navigation
+- Animated ranking board with animated crown for leader (framer-motion)
+- Score history table (columns per round)
+- Chart.js evolution chart (one line per player)
+- Stats dashboard (top scorer, biggest round, etc.)
+- Victory screen at 200+ points with canvas-confetti and navigator.vibrate
+- Auto-save/restore from localStorage
+- Sound effects via AudioContext Web API (toggle on/off)
+- Dark/light mode toggle
+- PWA: manifest.json, sw.js (Cache First), iOS meta tags, Install App button
+- Share App button (Web Share API)
+
+**Stack:** React + Vite, Tailwind CSS, framer-motion, chart.js, canvas-confetti, wouter
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces

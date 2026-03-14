@@ -1,0 +1,10 @@
+packages:
+  "framer-motion": "Animations for the ranking board and screen transitions"
+  "uuid": "For generating unique player and round IDs"
+  "@types/uuid": "Types for uuid"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  
+notes:
+  - chart.js and canvas-confetti are already installed per context.
+  - The app is entirely frontend-driven with state persisting to localStorage.
