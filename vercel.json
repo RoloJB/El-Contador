@@ -1,15 +1,9 @@
 {
   "buildCommand": "pnpm --filter @workspace/scorekeeper run build",
   "outputDirectory": "artifacts/scorekeeper/dist",
-  "rootDirectory": ".",
   "installCommand": "pnpm install",
   "framework": null,
   "routes": [
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/icon(.*)", "dest": "/icon$1" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
-    { "src": "/sw.js", "dest": "/sw.js" },
-    { "src": "/favicon.svg", "dest": "/favicon.svg" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
