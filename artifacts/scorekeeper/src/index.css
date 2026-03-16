@@ -40,7 +40,7 @@
   --card-foreground: 240 10% 3.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 240 10% 3.9%;
-  --primary: 270 100% 60%;
+  --primary: 26 100% 54%;
   --primary-foreground: 0 0% 100%;
   --secondary: 240 4.8% 95.9%;
   --secondary-foreground: 240 5.9% 10%;
@@ -52,7 +52,7 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
-  --ring: 270 100% 60%;
+  --ring: 26 100% 54%;
   --radius: 1rem;
 }
 
@@ -63,7 +63,7 @@
   --card-foreground: 0 0% 98%;
   --popover: 240 10% 6%;
   --popover-foreground: 0 0% 98%;
-  --primary: 270 100% 60%;
+  --primary: 26 100% 54%;
   --primary-foreground: 0 0% 100%;
   --secondary: 240 3.7% 15.9%;
   --secondary-foreground: 0 0% 98%;
@@ -75,7 +75,7 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
-  --ring: 270 100% 60%;
+  --ring: 26 100% 54%;
 }
 
 @layer base {
@@ -95,7 +95,7 @@
   .bg-mesh {
     background-color: hsl(var(--background));
     background-image: 
-      radial-gradient(at 0% 0%, hsla(270, 100%, 60%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(26, 100%, 54%, 0.1) 0px, transparent 50%),
       radial-gradient(at 100% 100%, hsla(190, 100%, 50%, 0.1) 0px, transparent 50%);
     background-attachment: fixed;
   }

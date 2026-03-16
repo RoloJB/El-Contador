@@ -36,7 +36,7 @@ export function Setup({ state, addPlayer, removePlayer, beginPlaying, resumeGame
       <div className="w-full max-w-lg space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
         
         <div className="text-center space-y-2">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl overflow-hidden mb-4 shadow-[0_0_30px_rgba(153,51,255,0.3)]">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl overflow-hidden mb-4 shadow-[0_0_30px_rgba(255,121,20,0.3)]">
             <img src={appIcon} alt="El Contador" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-5xl font-display font-black bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
